@@ -16,7 +16,7 @@ if(count($errores) == 0) {
 
 if(count($errores) == 0) {
   saveUser($usuario);
-  header('Location: index.php');
+  header('Location: iniciar-sesion.php');
   exit;
 }
 }
@@ -132,6 +132,10 @@ if(count($errores) == 0) {
 </div>
          </div>
 </div>
+<?php if(isset($_SESSION['email'])): ?>
+
+  <?php endif;?>
+
 <!---Registro--->
 
 <!-- Footer -->
@@ -139,7 +143,7 @@ if(count($errores) == 0) {
     <!-- Links -->
     <ul class="nav justify-content-center mb-3">
       <li class="nav-item">
-        <a class="nav-link text-white" href="index.html">Inicio</a>
+        <a class="nav-link text-white" href="index.php">Inicio</a>
       </li>
       <li class="nav-item">
         <a class="nav-link text-white" href="#">Condiciones de uso</a>
@@ -148,7 +152,7 @@ if(count($errores) == 0) {
         <a class="nav-link text-white" href="#">Politicas y Servicios</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
+  <a class="nav-link text-white" href="preguntas-frecuentes.php">Preguntas Frecuentes</a>
       </li>
      
     </ul>

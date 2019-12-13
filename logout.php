@@ -2,5 +2,5 @@
     include_once('funciones.php');
 
     logout();
-    header("Location: index.php");
+    header("Location: iniciar-sesion.php");
 ?>

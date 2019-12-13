@@ -74,7 +74,7 @@
                             </li>
                             
                             <li class="nav-item">
-                              <a class="nav-link text-white btn btn-secondary mx-1" href="preguntas-frecuentes.php"> <i class="icon ion-md-help"></i>
+                              <a class="nav-link text-white btn btn-secondary mx-1" href="preguntas-frecuentes.php"> 
 FAQs
                               </a>
                             </li>
@@ -94,8 +94,10 @@ FAQs
                 </span>               
             </form>
             </li>
-           
-      
+           <li class="nav-item ">
+           <a class="nav-link text-white btn btn-secondary py-2 mx-1" href="index.php"> Inicio</a>
+
+      </li>
       <li class="nav-item dropdown text-white btn  btn-secondary" style="
     padding-left: 0px;
     padding-right: 0px;
@@ -105,7 +107,7 @@ FAQs
       <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mi cuenta</a>
         <div class="dropdown-menu  " aria-labelledby="navbarDropdown">
         <?php if(isset($archivo)):    ?>
-          <a class="dropdown-item " href="#"><img src="<?=$archivo ?>"style="
+          <a class="dropdown-item " href="perfil.php"><img src="<?=$archivo ?>"style="
     width: 100px;
 "></a>
           <?php else:   ?>
@@ -133,8 +135,9 @@ FAQs
 
         </div>
       </li>
+     
       </ul>
-        <?php endif;?>
+      <?php endif;?>
        
         
                        

@@ -37,19 +37,19 @@
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <title>Pagina Web | Proyecto</title>
   </head>
-  <body>
+  <body style="background-image:url(fondo.jpg);background-attachment: fixed;">
     
         
-            <?php include_once('navbar.php'); ?>
+            <?php include('navbar.php'); ?>
             <?php //SI EL CONTROLLER DE LOGIN DA FALSE, MUESTRO EL SIGUIENTE BLOQUE ?>
             <?php if(!loginController()): ?>
             <div class="alert alert-danger" role="alert">
-                No estas autorizado en este sistema <a href="register.php" class="alert-link">Registrate!</a>
+                No estas autorizado en este sistema <a href="registro.php" class="alert-link">Registrate!</a>
             </div>
             <?php endif; 
             // SI PASA, NO LO MUESTRO Y POR EL CONTRARIO, LE MUESTRO SU PERFIL!
             ?>
-            <div class="container">
+            <div class="container my-2">
             <div class="row">
             
                 <div class="card col-4">
@@ -65,12 +65,18 @@
                     <div class="card-body">
                         <h5 class="card-title"><?="Bienvenido $username!" ?></h5>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, adipisci.</p>
-                        <a href="#" class="btn btn-primary">Codea!</a>
                     </div>
                 </div>
-                <div class="col-6 offset-1">
-                <h2>Estas son las ultimas noticias</h2>
-                <?php print getContent();?>
+                <div class="col-8 ">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item text-white">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">info</a>
+  </li>
+  
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">Proximamente...</div>
+  </div>
                 </div>
             </div>
         </div>

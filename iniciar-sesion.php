@@ -63,7 +63,7 @@
                         <div class="form-group">
                                <div class="input-group">
                                <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
-                               <input name="email" type="text" class="form-control" value="" placeholder="Email">
+                               <input name="email" type="text" class="form-control" value="<?=!isset($errores['email']) ? old('email') : "" ?>" placeholder="Email">
                                </div>
                                <span class="help-block" id="error"></span>
                           </div>
@@ -107,7 +107,7 @@
     <!-- Links -->
     <ul class="nav justify-content-center mb-3">
       <li class="nav-item">
-        <a class="nav-link text-white" href="index.html">Inicio</a>
+        <a class="nav-link text-white" href="index.php">Inicio</a>
       </li>
       <li class="nav-item">
         <a class="nav-link text-white" href="#">Politicas y Servicios</a>
@@ -116,7 +116,7 @@
         <a class="nav-link text-white " href="#">Condiciones de uso</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
+        <a class="nav-link text-white" href="preguntas-frecuentes.php">Preguntas Frecuentes</a>
       </li>
       
     </ul>

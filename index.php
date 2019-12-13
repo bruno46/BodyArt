@@ -74,7 +74,7 @@ include 'navbar.php'
 
 <div class="container-fluid my-5">
 <div class="row mb-4">
-    <div class="col-lg-3 col-md-3 col-ms-3 text-center">
+    <div class="col-lg-3 col-md-3 col-ms-3 col-6 my-1 text-center">
       <div class="fondo-compra py-3">
       <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
       <h2>@Tito</h2>
@@ -82,7 +82,7 @@ include 'navbar.php'
       <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
     </div>
   </div>
-    <div class="col-lg-3 col-md-3 col-ms-3 text-center">
+    <div class="col-lg-3 col-md-3 col-ms-3 col-6 my-1 text-center">
       <div class="fondo-compra py-3">
       <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
       <h2>@Jorge</h2>
@@ -90,7 +90,7 @@ include 'navbar.php'
       <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
     </div>
   </div>
-    <div class="col-lg-3 col-md-3 col-ms-3 text-center">
+    <div class="col-lg-3 col-md-3 col-ms-3  col-6 my-1 text-center">
       <div class="fondo-compra py-3 ">
       <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
       <h2>@Tatuman</h2>
@@ -98,10 +98,10 @@ include 'navbar.php'
       <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
     </div>
   </div>
-    <div class="col-lg-3 col-md-3 col-ms-3 text-center">
+    <div class="col-lg-3 col-md-3 col-ms-3 col-6 my-1 text-center">
       <div class="fondo-compra py-3">
       <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-      <h2>@Tatuman</h2>
+      <h2>@Bruno</h2>
       <p></p>
       <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
     </div>
@@ -178,7 +178,7 @@ include 'navbar.php'
     <div class="container text-center">
 
       <div class="row">
-        <div class="col-lg-4 col-md-4 ">
+        <div class="col-lg-4 col-md-4  col-6">
           <div class="card mb-4 shadow-sm">
             <div class="mx-2 my-2">
             <img class="bd-placeholder-img card-img-top border" width="100%" height="225" src="img/modelo/modelo1-1.jpg">
@@ -194,7 +194,7 @@ include 'navbar.php'
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4">
+        <div class="col-lg-4 col-md-4 col-6">
           <div class="card mb-4 shadow-sm">
               <div class="mx-2 my-2">
             <img class="bd-placeholder-img card-img-top border" width="100%" height="225" src="img/modelo/modelo2-2.jpg">
@@ -210,7 +210,7 @@ include 'navbar.php'
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4">
+        <div class="col-lg-4 col-md-4 col-6">
           
           <div class="card mb-4 shadow-sm">
             <div class="mx-2 my-2">
@@ -228,7 +228,7 @@ include 'navbar.php'
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-4">
+        <div class="col-lg-4 col-md-4 col-6">
           <div class="card mb-4 shadow-sm">
               <div class="mx-2 my-2">
 
@@ -245,7 +245,7 @@ include 'navbar.php'
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4">
+        <div class="col-lg-4 col-md-4 col-6">
           <div class="card mb-4 shadow-sm">
               <div class="mx-2 my-2">
             <img class="bd-placeholder-img card-img-top border" width="100%" height="225" src="img/modelo/modelo5.jpg">
@@ -261,7 +261,7 @@ include 'navbar.php'
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4">
+        <div class="col-lg-4 col-md-4 col-6">
           <div class="card mb-4 shadow-sm">
               <div class="mx-2 my-2">
             <img class="bd-placeholder-img card-img-top border" width="100%" height="225" src="img/modelo/modelo6.jpg">
@@ -278,7 +278,7 @@ include 'navbar.php'
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-4">
+        <div class="col-lg-4 col-md-4 col-6">
           <div class="card mb-4 shadow-sm">
               <div class="mx-2 my-2">
             <img class="bd-placeholder-img card-img-top border" width="100%" height="225" src="img/modelo/modelo7.jpg">
@@ -294,7 +294,7 @@ include 'navbar.php'
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4">
+        <div class="col-lg-4 col-md-4 col-6">
           <div class="card mb-4 shadow-sm">
               <div class="mx-2 my-2">
               <img class="bd-placeholder-img card-img-top border" width="100%" height="225" src="img/modelo/modelo8.jpg">
@@ -310,7 +310,7 @@ include 'navbar.php'
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4">
+        <div class="col-lg-4 col-md-4 col-6">
           <div class="card mb-4 shadow-sm">
               <div class="mx-2 my-2">
               <img class="bd-placeholder-img card-img-top border" width="100%" height="225" src="img/modelo/modelo9.jpg">
@@ -336,29 +336,14 @@ include 'navbar.php'
         
 </div>
 
-<div class="row mb-5">
-<div class="col-lg-3 mx-auto">
-<div class="btn-toolbar mx-auto " role="toolbar" aria-label="Toolbar with button groups">
-  <div class="btn-group text-center mr-2" role="group" aria-label="First group">
-    <button type="button" class="btn bg-light btn-outline-secondary">1</button>
-    <button type="button" class="btn bg-light btn-outline-secondary">2</button>
-    <button type="button" class="btn bg-light btn-outline-secondary">3</button>
-    <button type="button" class="btn bg-light btn-outline-secondary">4</button>
-    <button type="button" class="btn bg-light btn-outline-secondary">5</button>
-    <button type="button" class="btn bg-light btn-outline-secondary">6</button>
-    <button type="button" class="btn bg-light btn-outline-secondary">7</button>
-    <button type="button" class="btn bg-light btn-outline-secondary">8</button>
-  </div>
-</div>
-</div>
-</div>
+
 <!-- Footer -->
 <footer class="container-fluid-footer pt-2">
           <!-- Links -->
 <div>
           <ul class="nav justify-content-center font-weight-light mb-3">
               <li class="nav-item">
-                  <a class="nav-link text-white" href="index.html">Inicio</a>
+                  <a class="nav-link text-white" href="index.php">Inicio</a>
                 </li>
             <li class="nav-item">
               <a class="nav-link text-white" href="#">Condiciones de Uso</a>
@@ -368,7 +353,7 @@ include 'navbar.php'
             </li>
             
             <li class="nav-item">
-              <a class="nav-link text-white" href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
+              <a class="nav-link text-white" href="preguntas-frecuentes.php">Preguntas Frecuentes</a>
             </li>
           </ul>
         </div>
@@ -385,25 +370,18 @@ include 'navbar.php'
         </a>
       </li>
       <li class="list-inline-item">
-        <a href="#" class="btn-floating btn-tw mx-1">
+        <a href="https://twitter.com"  target='_blank' class="btn-floating btn-tw mx-1">
           <i class="icon ion-logo-twitter"> </i>
         </a>
       </li>
+     
       <li class="list-inline-item">
-        <a href="#" class="btn-floating btn-gplus mx-1">
-          <i class="icon ion-logo-googleplus"> </i>
+        <a href="https://youtube.com "  target='_blank' class="btn-floating btn-li mx-1">
+        <i class="icon ion-logo-youtube"></i>
+
         </a>
       </li>
-      <li class="list-inline-item">
-        <a href="#"class="btn-floating btn-li mx-1">
-          <i class="icon ion-logo-linkedin"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a href="#" class="btn-floating btn-dribbble mx-1">
-          <i class="icon ion-logo-dribbble"> </i>
-        </a>
-      </li>
+     
     </ul>
     </div>
     <!-- Social buttons -->

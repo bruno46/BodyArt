@@ -88,7 +88,7 @@ include 'navbar.php'
     <!-- Links -->
     <ul class="nav justify-content-center font-weight-light text-center mb-3">
         <li class="nav-item">
-            <a class="nav-link text-white" href="index.html">Inicio</a>
+            <a class="nav-link text-white" href="index.php">Inicio</a>
           </li>
       <li class="nav-item">
         <a class="nav-link text-white" href="#">Condiciones de Uso</a>
@@ -98,7 +98,7 @@ include 'navbar.php'
       </li>
      
       <li class="nav-item">
-        <a class="nav-link text-white" href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
+        <a class="nav-link text-white" href="preguntas-frecuentes.php">Preguntas Frecuentes</a>
       </li>
     </ul>
 
