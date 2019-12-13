@@ -26,9 +26,9 @@
 
         $name = trim($datos['name']);
 
-        if($username == "") {
+        if($name == "") {
             $errores['name'] = "Por favor completar el nombre ";
-        } elseif(strlen($username) <= 3 ) {
+        } elseif(strlen($name) <= 3 ) {
             $errores['name'] = "El nombre debe tener minimo 4 caracteres";
         }
 

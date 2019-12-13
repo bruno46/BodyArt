@@ -20,7 +20,7 @@ include 'navbar.php'
               <!--- BARRA DE NAVEGACION --->
 <!---CONTENEDER--->
 <div class="container-fluid">
-    <div class="bd-example">
+    <div class="bd-example mt-1">
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>

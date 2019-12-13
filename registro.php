@@ -68,7 +68,7 @@ if(count($errores) == 0) {
                   <div class="form-group">
                   <div class="input-group">
                   
-                            <input name="name" type="text" class="form-control mb-3" placeholder="Nombre">
+                            <input name="name" type="text" class="form-control mb-3" placeholder="Nombre" value="<?=!isset($errores['name']) ? old('name') : "" ?>">
 
                             </div>
                             <span class="help-block" id="error"></span>
