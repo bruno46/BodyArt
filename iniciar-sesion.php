@@ -38,133 +38,107 @@
  <!---BARRA DE NAVEGACION--->
   <!---INICIAR SESION--->
 <div class="container-fluid px-auto pb-5 ">
-        <div class="container pt-5 pb-5 ">
-        <?php if(loginController()): ?>
-            <div class="alert alert-danger" role="alert">
-               Ya estas conectado, por favor <a href="index.php" class="alert-link">volver al inicio</a>
-            </div>
-            <?php endif; ?>
-            <div class="row">
-                <div class="col-lg-6 mx-auto py-3 px-3 fondo-imagen">
-                <div class="signup-form ">
-                    
-                     <form role="form" id="register-form" autocomplete="off" method="post">
-                     <div class="form-header">
-                      <h3 class="form-title text-center text-white mb-3"><i class="icon ion-md-contact"></i> Iniciar Sesion</h3>
-                                  
-                     <div class="pull-right">
+  <div class="container pt-5 pb-5 ">
+   <?php if(loginController()): ?>
+    <div class="alert alert-danger" role="alert">
+       Ya estas conectado, por favor <a href="index.php" class="alert-link">volver al inicio</a>
+    </div>
+    <?php endif; ?>
+      <div class="row">
+         <div class="col-lg-6 mx-auto py-3 px-3 fondo-imagen">
+            <div class="signup-form ">
+               <form role="form" id="register-form" autocomplete="off" method="post">
+                  <div class="form-header">
+                     <h3 class="form-title text-center text-white mb-3"><i class="icon ion-md-contact"></i> Iniciar Sesion</h3>
+                       <div class="pull-right">
                          <h3 class="form-title"><span class="glyphicon glyphicon-pencil"></span></h3>
-                     </div>
-                                  
-                     </div>
-                     
-                     <div class="form-body">
-                                  
-                        <div class="form-group">
-                               <div class="input-group">
-                               <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                       </div>
+                   </div>
+                   <div class="form-body">
+                     <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
                                <input name="email" type="text" class="form-control" value="<?=!isset($errores['email']) ? old('email') : "" ?>" placeholder="Email">
-                               </div>
-                               <span class="help-block" id="error"></span>
-                          </div>
-                               <div class="form-group ">
-                                    <div class="input-group">
-                                    <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
-                                    <input name="password" id="password" type="password" class="form-control mb-3" placeholder="Contraseña">
-                                    </div>  
-                                    <span class="help-block" id="error"></span> 
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                        <label class="form-check-label" for="defaultCheck1">
-                                          Recordar Contraseña
-                                        </label>
-                                      </div>
-                                    <button type="submit" class="btn btn-primary btn-lg btn-block mt-3 ">
-                                        <span class="glyphicon glyphicon-log-in"></span> Iniciar Sesion!
-                                        </button>  
-                                        <p class="mt-1 d-flex justify-content-between">
-                                          <a href="#">¿Has olvidado tu contraseña?</a>* 
-                                          <a href="registro.php">¿No tienes una cuenta?Registrate!</a></p>                
-                               </div>
-                               
-                         </div>      
+                            </div>
+                          <span class="help-block" id="error"></span>
+                      </div>
+                      <div class="form-group ">
+                        <div class="input-group">
+                           <div class="input-group-addon">
+                              <span class="glyphicon glyphicon-lock"></span>
+                            </div>
+                            <input name="password" id="password" type="password" class="form-control mb-3" placeholder="Contraseña">
+                        </div>  
+                          <span class="help-block" id="error"></span> 
+                        <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                          <label class="form-check-label" for="defaultCheck1">
+                              Recordar Contraseña
+                           </label>
                         </div>
-                        
-                        
-            </div>
-                </div>
-                        
-                    
-                    </div>
-            </div>
-             </div>
-
-
+                        <button type="submit" class="btn btn-primary btn-lg btn-block mt-3 ">
+                          <span class="glyphicon glyphicon-log-in"></span> Iniciar Sesion!
+                        </button>  
+                        <p class="mt-1 d-flex justify-content-between">
+                          <a href="#">¿Has olvidado tu contraseña?</a>* 
+                          <a href="registro.php">¿No tienes una cuenta?Registrate!</a></p>                
+                      </div>
+                   </div>      
+             </div>               
+          </div>
+       </div>         
+   </div>
 </div>
- <!---INICIAR SESION--->
 <!-- Footer -->
 <footer class="container-fluid-footer pt-4">
-    <!-- Links -->
     <ul class="nav justify-content-center mb-3">
       <li class="nav-item">
         <a class="nav-link text-white" href="index.php">Inicio</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link text-white" href="#">Condiciones de uso</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link text-white" href="#">Politicas y Servicios</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white " href="#">Condiciones de uso</a>
+       <a class="nav-link text-white" href="preguntas-frecuentes.php">Preguntas Frecuentes</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="preguntas-frecuentes.php">Preguntas Frecuentes</a>
-      </li>
-      
     </ul>
-   <!---Links--->
-<!-- Redes Sociales -->
+<!-- Social buttons -->
 <ul class="list-unstyled list-inline text-center">
-<li class="list-inline-item">
-  <a href="https://facebook.com"  target='_blank'class="btn-floating btn-fb mx-1">
-    <i class="icon ion-logo-facebook"> </i>
-  </a>
-</li>
-<li class="list-inline-item">
-  <a href="#" class="btn-floating btn-tw mx-1">
-    <i class="icon ion-logo-twitter"> </i>
-  </a>
-</li>
-<li class="list-inline-item">
-  <a href="#" class="btn-floating btn-gplus mx-1">
-    <i class="icon ion-logo-googleplus"> </i>
-  </a>
-</li>
-<li class="list-inline-item">
-  <a href="#"class="btn-floating btn-li mx-1">
-    <i class="icon ion-logo-linkedin"> </i>
-  </a>
-</li>
-<li class="list-inline-item">
-  <a href="#" class="btn-floating btn-dribbble mx-1">
-    <i class="icon ion-logo-dribbble"> </i>
-  </a>
-</li>
+  <li class="list-inline-item">
+    <a href="https://facebook.com"  target='_blank'class="btn-floating btn-fb mx-1">
+      <i class="icon ion-logo-facebook"> </i>
+    </a>
+  </li>
+  <li class="list-inline-item">
+    <a href="#" class="btn-floating btn-tw mx-1">
+      <i class="icon ion-logo-twitter"> </i>
+    </a>
+  </li>
+  <li class="list-inline-item">
+    <a href="#" class="btn-floating btn-gplus mx-1">
+      <i class="icon ion-logo-googleplus"> </i>
+    </a>
+  </li>
+  <li class="list-inline-item">
+    <a href="#"class="btn-floating btn-li mx-1">
+      <i class="icon ion-logo-linkedin"> </i>
+    </a>
+  </li>
+  <li class="list-inline-item">
+    <a href="#" class="btn-floating btn-dribbble mx-1">
+      <i class="icon ion-logo-dribbble"> </i>
+    </a>
+  </li>
 </ul>
-<!-- REDES SOCIALES -->
-
 <!-- Copyright -->
-<div class="footer-copyright text-center py-3">© 2019 Copyright Body Art
-
-</div>
-<!-- Copyright -->
-
+ <div class="footer-copyright text-center py-3">© 2018 Copyright Body Art
+ </div>
 </footer>
-<!-- Footer -->
-
-
-
-
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
+ </body>
 </html>
