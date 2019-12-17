@@ -1,1 +1,1 @@
-# proyecto integrador para Digital House.
+# Proyecto integrador para Digital House.
