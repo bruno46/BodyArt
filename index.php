@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
     <link rel="stylesheet" href="video/fondovideo.css">
+    <link href="https://fonts.googleapis.com/css?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
 </head>
 <body>
     <video src="video/videotattoo.mp4" autoplay muted loop></video>
