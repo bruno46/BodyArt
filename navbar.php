@@ -34,7 +34,7 @@
     <div class="container">
       <ul class="navbar-nav mr-auto">
        <li class="nav-item my-1 mx-1 " style="width: 70px;">
-          <a class="navbar-brand" href="index.php">
+          <a class="navbar-brand" href="inicio.php">
             <img class="" src="img/logo1.jpg" alt="" width="70px">
           </a>
        </li>
@@ -79,7 +79,7 @@
           </form>
             </li>
            <li class="nav-item ">
-            <a class="nav-link text-white btn btn-secondary py-2 mx-1" href="index.php"> Inicio</a>
+            <a class="nav-link text-white btn btn-secondary py-2 mx-1" href="inicio.php"> Inicio</a>
            </li>
            <li class="nav-item dropdown text-white btn  btn-secondary" style="padding-left: 0px;padding-right: 0px;padding-bottom: 0px;padding-top: 0px;"> 
               <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mi cuenta</a>
