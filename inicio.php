@@ -5,22 +5,16 @@ include_once('funciones.php');
     if($_SESSION) {
         $username = $_SESSION['email'];
     }
-?>  
+?>    
+<?php include 'head.php'?>
 
-<html>
-    <?php
-include 'head.php'
-?>
-<body style="background-image:url(fondo.jpg);background-attachment: fixed;">
-<?php
-include 'navbar.php'
-?>
+<?php include 'navbar.php'?>
 
 
               <!--- BARRA DE NAVEGACION --->
 <!---CONTENEDER--->
 <div class="container-fluid">
-    <div class="bd-example mt-1">
+    <div class="bd-example ">
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -66,41 +60,35 @@ include 'navbar.php'
 
 
 
-
-<!---IMAGEN-UNO--->
-
-
-
-
 <div class="container-fluid my-5">
   <div class="row mb-4">
-    <div class="col-lg-3 col-md-3 col-ms-3 col-6 my-1 text-center">
+    <div class="col-lg-3 col-md-3 col-ms-3 col-12 my-1 text-center">
       <div class="fondo-compra py-3">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-        <h2>@Tito</h2>
+      <img src="img/perfil/profile.png" width="140" height="140" class="rounded-circle">       
+       <h2>@Tito</h2>
         <p></p>
         <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
       </div>
     </div>
-    <div class="col-lg-3 col-md-3 col-ms-3 col-6 my-1 text-center">
+    <div class="col-lg-3 col-md-3 col-ms-3 col-12 my-1 text-center">
       <div class="fondo-compra py-3">
-       <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+      <img src="img/perfil/profile.png" width="140" height="140" class="rounded-circle">       
       <h2>@Jorge</h2>
       <p></p>
       <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
      </div>
     </div>
-    <div class="col-lg-3 col-md-3 col-ms-3  col-6 my-1 text-center">
+    <div class="col-lg-3 col-md-3 col-ms-3  col-12 my-1 text-center">
       <div class="fondo-compra py-3 ">
-       <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+      <img src="img/perfil/profile.png" width="140" height="140" class="rounded-circle">       
        <h2>@Tatuman</h2>
        <p></p>
        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
      </div>
    </div>
-   <div class="col-lg-3 col-md-3 col-ms-3 col-6 my-1 text-center">
+   <div class="col-lg-3 col-md-3 col-ms-3 col-12 my-1 text-center">
      <div class="fondo-compra py-3">
-       <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+     <img src="img/perfil/profile.png" width="140" height="140" class="rounded-circle">       
        <h2>@Bruno</h2>
        <p></p>
        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
@@ -109,6 +97,9 @@ include 'navbar.php'
    </div>
   </div>
 </div>
+<div class="border-bottom border-warning">
+
+</div> 
 <!--modal-->
 <div class="container" >
   <div class="card-columns" id="galeria">
@@ -139,14 +130,14 @@ include 'navbar.php'
       <h1>Tattos</h1>
       <p class="lead text-muted">En esta seccion vas a poder mirar los diferentes modelos disponibles para vos!.</p>
       <p>
-      <a href="#" class="btn btn-primary my-2">Categorias</a>
+      <a href="listado.php" class="btn btn-primary my-2">Categorias</a>
       </p>
   </div>
 </div>
 <div class="py-5">
   <div class="container text-center">
      <div class="row">
-        <div class="col-lg-4 col-md-4  col-6">
+        <div class="col-lg-4 col-md-4  col-12">
           <div class="card mb-4 shadow-sm">
             <div class="mx-2 my-2">
               <img class="bd-placeholder-img card-img-top border" width="100%" height="225" src="img/modelo/modelo1-1.jpg">
@@ -162,7 +153,7 @@ include 'navbar.php'
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-6">
+        <div class="col-lg-4 col-md-4 col-12">
           <div class="card mb-4 shadow-sm">
               <div class="mx-2 my-2">
                 <img class="bd-placeholder-img card-img-top border" width="100%" height="225" src="img/modelo/modelo2-2.jpg">
@@ -178,7 +169,7 @@ include 'navbar.php'
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-6">
+        <div class="col-lg-4 col-md-4 col-12">
           <div class="card mb-4 shadow-sm">
             <div class="mx-2 my-2">
               <img class="bd-placeholder-img card-img-top border" width="100%" height="225" src="img/modelo/modelo3.jpg">
@@ -194,7 +185,7 @@ include 'navbar.php'
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-6">
+        <div class="col-lg-4 col-md-4 col-12">
           <div class="card mb-4 shadow-sm">
             <div class="mx-2 my-2">
               <img class="bd-placeholder-img card-img-top border" width="100%" height="225" src="img/modelo/modelo4.jpg">
@@ -210,7 +201,7 @@ include 'navbar.php'
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-6">
+        <div class="col-lg-4 col-md-4 col-12">
           <div class="card mb-4 shadow-sm">
               <div class="mx-2 my-2">
             <img class="bd-placeholder-img card-img-top border" width="100%" height="225" src="img/modelo/modelo5.jpg">
@@ -226,7 +217,7 @@ include 'navbar.php'
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-6">
+        <div class="col-lg-4 col-md-4 col-12">
           <div class="card mb-4 shadow-sm">
               <div class="mx-2 my-2">
             <img class="bd-placeholder-img card-img-top border" width="100%" height="225" src="img/modelo/modelo6.jpg">
@@ -242,7 +233,7 @@ include 'navbar.php'
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-6">
+        <div class="col-lg-4 col-md-4 col-12">
           <div class="card mb-4 shadow-sm">
               <div class="mx-2 my-2">
                 <img class="bd-placeholder-img card-img-top border" width="100%" height="225" src="img/modelo/modelo7.jpg">
@@ -258,7 +249,7 @@ include 'navbar.php'
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-6">
+        <div class="col-lg-4 col-md-4 col-12">
           <div class="card mb-4 shadow-sm">
               <div class="mx-2 my-2">
               <img class="bd-placeholder-img card-img-top border" width="100%" height="225" src="img/modelo/modelo8.jpg">
@@ -274,7 +265,7 @@ include 'navbar.php'
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-6">
+        <div class="col-lg-4 col-md-4 col-12">
           <div class="card mb-4 shadow-sm">
               <div class="mx-2 my-2">
               <img class="bd-placeholder-img card-img-top border" width="100%" height="225" src="img/modelo/modelo9.jpg">
@@ -292,7 +283,11 @@ include 'navbar.php'
         </div>
       </div>
    </div>
+   <div class="border-bottom border-warning">
+
+</div> 
 </div>
+
 <!-- Footer -->
 <footer class="container-fluid-footer pt-4">
     <ul class="nav justify-content-center mb-3">

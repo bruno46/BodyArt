@@ -29,8 +29,8 @@
 ?>  
 
 
-
- <nav class="navbar navbar-expand-lg navbar-dark">
+<body style="background-image:url(fondo.jpg);background-attachment: fixed;  margin-top: 85px;">
+ <nav class="navbar navbar-expand-lg navbar-dark position-fixed fixed-top">
     <div class="container">
       <ul class="navbar-nav mr-auto">
        <li class="nav-item my-1 mx-1 " style="width: 70px;">
@@ -82,12 +82,12 @@
             <a class="nav-link text-white btn btn-secondary py-2 mx-1" href="inicio.php"> Inicio</a>
            </li>
            <li class="nav-item dropdown text-white btn  btn-secondary" style="padding-left: 0px;padding-right: 0px;padding-bottom: 0px;padding-top: 0px;"> 
-              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mi cuenta</a>
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mi Cuenta</a>
            <div class="dropdown-menu  " aria-labelledby="navbarDropdown">
            <?php if(isset($archivo)):    ?>
             <a class="dropdown-item " href="perfil.php"><img src="<?=$archivo ?>"style="width: 100px;"></a>
           <?php else:   ?>
-          <a class="dropdown-item" href="perfil.php"><img src="img/perfil/profile.png" class="text-center" style="width: 100px;">></a>
+          <a class="dropdown-item" href="perfil.php"><img src="img/perfil/profile.png" class="text-center" style="width: 100px;"></a>
             <?php endif; ?>
           <a class="dropdown-item" href="perfil.php">Mi perfil</a>
           <a class="dropdown-item" href="preguntas-frecuentes.php">FAQs</a>
