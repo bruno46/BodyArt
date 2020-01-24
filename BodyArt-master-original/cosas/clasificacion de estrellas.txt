@@ -1,0 +1,92 @@
+Clasificación de 5 estrellas
+¿Que queremos conseguir?
+Queremos hacer un sistema de clasificación para lo que sea.  Al pasar con el ratón por encima las estrellas tienen que cambiar de color, y tienen que retener este color, mientras que el ratón apunta a una clasificación más alta.
+Al hacer clic sobre una estrella, digamos la tercera, todas las primeras tres estrellas cambian de color y retienen su color hasta que el usuario decida cambiar de nuevo la calificación, o hasta enviar el formulario.
+Hasta ahora, para conseguir esto se utilizaba JavaScript. Por suerte el CSS3 pone a nuestra disposición los mecanismos necesarios para realizar esto solo con HTML y CSS.
+
+?????
+
+El HTML
+En el HTML utilizamos 5 elementos <input type="radio"> vinculados a sendas etiquetas <label> El HTML interno de cada etiqueta es una estrella: ? ( &#9733; ).
+
+Para vincular una etiqueta <label> con un elemento de entrada <input>,  el valor del atributo for de <label> tiene que ser igual al valor del atributo id del <input>. Esto proporciona una mejora de usabilidad, ya que al hacer clic en el <label>, podemos activar o desactivar ( marcar o desmarcar ) el <input>.
+
+Lea más acerca del apaño de la etiqueta <label>star.
+
+Cada <input> tiene asignado un valor value de 5 a 1, y no aparece en pantalla ya que tiene display: none. Es importante no dejar espacio entre los <label> y los siguientes <input> ya que queremos que no haya espacio entre las estrellas. Una opción sería comentar el salto de línea.
+
+<form>
+  <p class="clasificacion">
+    <input id="radio1" type="radio" name="estrellas" value="5"><!--
+    --><label for="radio1">?</label><!--
+    --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+    --><label for="radio2">?</label><!--
+    --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+    --><label for="radio3">?</label><!--
+    --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+    --><label for="radio4">?</label><!--
+    --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+    --><label for="radio5">?</label>
+  </p>
+</form>
+El CSS
+En el CSS empezamos dando un color gris a las estrellas:
+
+label{ color:grey;}
+También escondemos los botones de radio:
+
+input[type = "radio"]{ display:none;}
+A continuación viene la parte interesante: En el CSS3 podemos seleccionar a todos los elementos precedidos por un otro. Por ejemplo input:checked~label selecciona cada <label> precedido por un <input checked>. Pero a nosotros nos interesa seleccionar a todos los <label> seguidos por un <input checked>. Imposible de hacer; o casi.
+
+Lo que sí podemos, es hacer que los elementos aparezcan en pantalla en orden contrario con esta regla:
+
+.clasificacion{
+      direction: rtl;/* right to left */
+      unicode-bidi: bidi-override;/* bidi de bidireccional */
+  }
+La propiedad direction: rtl; cambia la dirección de escritura  de derecha a izquierda ( right to left ). La otra propiedad unicode-bidi ( bidi de bidireccional ) se utiliza junto con la propiedad direction para cambiar  la dirección del texto. Normalmente se utilizan para insertar fragmentos de texto en idiomas de escritura derecha a izquierda, pero nos viene bien en este caso. Ahorra lo tenemos fácil.
+
+1. Al pasar por encima las etiquetas <label> ( o sea: las estrellas ) cambian de color.
+
+label:hover{color:orange;}
+2. También cambian de color todas las etiquetas <label> precedidas ( ~ ) por aquella <label> que tiene el ratón encima ( hover ).
+
+label:hover ~ label{color:orange;}
+3. Al marcar el botón de radio ( radio:checked ) todas las etiquetas <label> que le preceden ( ~ ) se vuelven color naranja
+
+input[type = "radio"]:checked ~ label{color:orange;}
+#form {
+  width: 250px;
+  margin: 0 auto;
+  height: 50px;
+}
+
+#form p {
+  text-align: center;
+}
+
+#form label {
+  font-size: 20px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  color: grey;
+}
+
+.clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+label:hover,
+label:hover ~ label {
+  color: orange;
+}
+
+input[type="radio"]:checked ~ label {
+  color: orange;
+}
