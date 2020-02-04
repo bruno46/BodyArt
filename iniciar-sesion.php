@@ -19,22 +19,9 @@
     }
 ?> 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">   
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-      <title>Pagina Web | Proyecto</title>
-</head>
-<body style="background-image:url(fondo.jpg);background-attachment: fixed;">
-  <!---BARRA DE NAVEGACION--->
-  <?php
-        include('navbar.php')
-        ?>
+<? include 'head.php' ?>
+
+  <?php include('navbar.php')  ?>
  <!---BARRA DE NAVEGACION--->
   <!---INICIAR SESION--->
 <div class="container-fluid px-auto pb-5 ">
