@@ -152,3 +152,4 @@ include 'funciones.php'?>
 </div>
 </div>
 </div>
+<?php include 'footer.php'?>
