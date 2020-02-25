@@ -11,8 +11,6 @@ if(count($errores) == 0) {
     $usuario->guardarImagen();
     $db->guardarUsuario($usuario);
     
-
-
 }
 }
 

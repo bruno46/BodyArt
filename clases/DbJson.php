@@ -1,6 +1,5 @@
 <?php 
 
-
 class DbJson extends Db
 {
     private $nombreArchivo;
@@ -13,8 +12,6 @@ class DbJson extends Db
     public function setNombreArchivo($nombreArchivo){
         $this->nombreArchivo = $nombreArchivo;
     }
-
-
 
     public function guardarUsuario(Usuario $usuario) 
     {
@@ -36,8 +33,6 @@ class DbJson extends Db
         }
         return $arrayUsers;
     }
-
-
 
     function traerPorMail($email)
     {

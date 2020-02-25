@@ -1,6 +1,5 @@
 <?php
 
-
 class DbMySQL extends Db
 {
   private $db;
@@ -27,8 +26,6 @@ $this->db = $db;
     $query->bindValue(":username", $usuario->getUsername(), PDO::PARAM_STR);
     $query->bindValue(":mail", $usuario->getMail(), PDO::PARAM_STR);
     $query->bindValue(":pass", $usuario->getPass(), PDO::PARAM_STR);
-  
-    
   
     try{
     $query->execute(); 

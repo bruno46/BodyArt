@@ -1,8 +1,5 @@
 <?php
 
-/**
- *
- */
 class Usuario
 {
 private $id;
@@ -17,14 +14,12 @@ public function __construct($id=null,$name,$username,$mail,$pass/*,$cpass=null*/
   $this->name = $name;
   $this->username = $username;
   $this->mail = $mail;
-  if ($id=null) {
+  if ($id==null) {
     $this->pass = password_hash($pass, PASSWORD_DEFAULT);
   }else
   $this->pass = $pass;
   //$this->cpass = $cpass;
   
-
-
 }
 public function getId(){
   return $this->id;
