@@ -1,33 +1,55 @@
 <?php
 
+
 class DbMySQL extends Db
 {
-  private $conexion;
+  private $db;
 
-   
+  public function __construct($db)
+{
+  $this->db=$db;
+}
+public function getDb()
+{
+  return $this->db;
+}
+
+public function setDb($db)
+{
+$this->db = $db;
+}
 	
-  static public function guardarUsuario($usuario) {
-    $query =$this->conexion->prepare("Insert into usuarios values(default,:name, :username,:mail,:pass,:avatar)");
-    $query->bindValue(":name", $usuario->getName());
-    $query->bindValue(":username", $usuario->getUsername());
-    $query->bindValue(":email", $usuario->getMail());
-    $query->bindValue(":password", $usuario->getPass());
-    $query->bindValue(":avatar", $avatar);
-    $id = $this->conexion->lastInsertId();
-  	$usuario->setId($id) ;
-    $query->execute();
+  public function guardarUsuario(Usuario $usuario) {
+    $db=$this->db;
+    
+    $query = $db->prepare("INSERT INTO usuarios(id,nombre,username,email,password) VALUES(default,:name, :username,:mail,:pass)");
+    $query->bindValue(":name", $usuario->getName(), PDO::PARAM_STR);
+    $query->bindValue(":username", $usuario->getUsername(), PDO::PARAM_STR);
+    $query->bindValue(":mail", $usuario->getMail(), PDO::PARAM_STR);
+    $query->bindValue(":pass", $usuario->getPass(), PDO::PARAM_STR);
+  
+    
+  
+    try{
+    $query->execute(); 
+  }catch (Exception $e) {
+    echo "La conexion a la base de datos falló: " . print_r($e->getMessage());}
+    $id = $db->lastInsertId();
+    $usuario->setId($id);
     return $usuario;
   }
-  static public function traerTodos() {
-    $query = $this->conexion->prepare("Select * from usuarios");
+  public function traerTodos() {
+    $db=$this->db;
+    $query = $db->prepare("Select * from usuarios");
     $query->execute();
     $results = $query->fetchAll(PDO::FETCH_ASSOC);
     return $results;
   }
   
-  static public function traerPorMail($email) {
-    $query = $this->conexion->prepare("Select * from usuarios where email = :email");
-    $query->bindValue(":email", $email);
+ public function traerPorMail($mail) {
+    $db=$this->db;
+    $query = $db->prepare("Select * from usuarios where email = :mail");
+    $query->bindValue(":mail",$mail,PDO::PARAM_STR);
     $query->execute();
     $mailTraidos = $query->fetchAll(PDO::FETCH_ASSOC);
     return $mailTraidos;

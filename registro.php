@@ -1,31 +1,25 @@
 <?php
-include_once('funciones.php');
+include_once('soporte.php');
+
 if ($_POST){ 
 
-$errores = validate($_POST);
- 
-
+$errores = $validador->validarInformacion($_POST);
 
 
 if(count($errores) == 0) {
-  $usuario = createUser($_POST);
+  $usuario = new Usuario(NULL,$_POST['name'],$_POST['username'], $_POST['email'], $_POST['password']);
+    $usuario->guardarImagen();
+    $db->guardarUsuario($usuario);
+    
 
-  $erroresAvatar = saveAvatar($usuario);
-  
-  $errores = array_merge($errores, $erroresAvatar);
 
-if(count($errores) == 0) {
-  saveUser($usuario);
-  header('Location: iniciar-sesion.php');
-  exit;
-}
 }
 }
 
-?>
 
-<?php include 'head.php' ?>
-<?php include 'navbar.php' ?>
+  include 'head.php';
+ include 'navbar.php'; 
+ ?>
 
                     <!---Registro--->
 <!---INICIAR SESION--->
@@ -46,7 +40,7 @@ if(count($errores) == 0) {
     <div class="signup-form">
       <div class="form-header">
         <h3 class="form-title text-center text-white mb-3"><i class="icon ion-md-contact"></i> Registro</h3>
-          <form role="form" id="register-form"  autocomplete="off" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
+          <form role="form" id="register-form" action="registro.php" autocomplete="off" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
             <div class="form-group">
               <div class="input-group">
                 <input name="name" type="text" class="form-control mb-3" placeholder="Nombre" value="<?=!isset($errores['name']) ? old('name') : "" ?>">

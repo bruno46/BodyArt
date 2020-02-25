@@ -10,10 +10,9 @@ private $name;
 private $username;
 private $mail;
 private $pass;
-private $reas;
-private $avatar;
 
-public function __construct($id=null,$name,$username,$mail,$pass,$repass,$avatar){
+
+public function __construct($id=null,$name,$username,$mail,$pass/*,$cpass=null*/){
  
   $this->name = $name;
   $this->username = $username;
@@ -22,8 +21,10 @@ public function __construct($id=null,$name,$username,$mail,$pass,$repass,$avatar
     $this->pass = password_hash($pass, PASSWORD_DEFAULT);
   }else
   $this->pass = $pass;
-  $this->repassword = $repass;
-  $this->avatar = $avatar;
+  //$this->cpass = $cpass;
+  
+
+
 }
 public function getId(){
   return $this->id;
@@ -37,6 +38,12 @@ public function getName(){
 public function setName($name){
   $this->name = $name;
 }
+public function getUsername(){
+  return $this->username;
+}
+public function setUsername($username){
+  $this->username = $username;
+}
 public function getMail(){
   return $this->mail;
 }
@@ -49,20 +56,17 @@ public function getPass(){
 public function setPass($pass){
   $this->pass = $pass;
 }
-public function getRepass(){
-  return $this->repas;
+/*public function getCpass(){
+  return $this->cpass;
 }
-public function setRepass($repass){
-  $this->repas = $repass;
-}
-public function getAvatar(){
- return $this->avatar;
-}
-public function setAvatar($avatar){
-  $this->avatar = $avatar;
-}
+public function setCpass($pass){
+  $this->cpass = $cpass;
+}*/
+
+
   public function guardarImagen(){
     $mail = $this->mail;
+    $errores = [];
     if ($_FILES["avatar"]["error"] == UPLOAD_ERR_OK)
 		{
 
@@ -72,15 +76,23 @@ public function setAvatar($avatar){
 			$ext = pathinfo($nombre, PATHINFO_EXTENSION);
 
 			if ($ext != "jpg" && $ext != "png" && $ext != "jpeg") {
-				return "Error";
+        $errores["avatar"] = "Solo acepto formatos jpg y png";
+        return $errores;
 			}
 
-			$miArchivo = dirname(__FILE__);
-			$miArchivo = $miArchivo . "/img/";
+			$miArchivo = dirname(__DIR__);
+      $miArchivo = $miArchivo . "../perfil/";
 			$miArchivo = $miArchivo . $mail . "." . $ext;
 
 			move_uploaded_file($archivo, $miArchivo);
-  }
+  }else {
+
+    $errores["avatar"] = "Hubo un error al procesar el archivo";
+
+}
+
+return $errores;
 }
 }
-?>
+
+

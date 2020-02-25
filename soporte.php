@@ -12,12 +12,12 @@ $dbType = "mysql";
 
 switch ($dbType) {
   case 'mysql':
-    $db = new DbMySQL();
+    $db = new DbMySQL($pdo);
     break;
 
   case 'json':
     $db = new DbJson();
     break;
 }
-$auth = new Auth();
-$validador = new Validador();
+$auth = new Auth($db);
+$validador = new Validador($db);

@@ -3,31 +3,31 @@
 
 class DbJson extends Db
 {
-    private $json;
-    public function __construct(){
-        $this->json = $json;
-}
-public function getNombreArchivo(){
-    return $this->nombreArchivo;
-}
-public function setNombreArchivo($nombreArchivo){
-    $this->nombreArchivo = $nombreArchivo;
-}
+    private $nombreArchivo;
+    public function __construct($nombreArchivo){
+        $this->nombreArchivo = $nombreArchivo;
+    }
+    public function getNombreArchivo(){
+        return $this->nombreArchivo;
+    }
+    public function setNombreArchivo($nombreArchivo){
+        $this->nombreArchivo = $nombreArchivo;
+    }
 
 
 
-    public function saveUser(Usuario $usuario) 
+    public function guardarUsuario(Usuario $usuario) 
     {
         $jsonUser = json_encode($usuario);
-        file_put_contents($this->json, $jsonUser . PHP_EOL, FILE_APPEND);
+        file_put_contents('users.json', $jsonUser . PHP_EOL, FILE_APPEND);
     }
 
     // 1 -Traer TODA la base
     // 2 - Buqueda por email
  
-    function traerTodaLaBase()
+    function traerTodos()
     {
-        $baseJson = file_get_contents($this->json);
+        $baseJson = file_get_contents('users.json');
         $users = explode(PHP_EOL, $baseJson);
         array_pop($users);
 
@@ -39,7 +39,7 @@ public function setNombreArchivo($nombreArchivo){
 
 
 
-    function buscamePorEmail($email)
+    function traerPorMail($email)
     {
         $arrayDeUsuariosTraidos = $this->traerTodaLaBase();
         foreach($arrayDeUsuariosTraidos as $user) {
