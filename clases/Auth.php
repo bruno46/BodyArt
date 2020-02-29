@@ -1,5 +1,5 @@
 <?php
-
+//
 class Auth
 {
 	public function iniciarSession(){
@@ -12,6 +12,8 @@ class Auth
 	$_SESSION["email"] = $usuario->getMail();
   setcookie("email", $usuario->getMail(), time()+3600);
   }
+
+  
 
 function loginController()
 {
