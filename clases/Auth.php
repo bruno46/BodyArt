@@ -9,8 +9,8 @@ class Auth
   }
 
   function login($usuario) {
-	$_SESSION["email"] = $usuario["email"];
-  setcookie("email", $usuario["email"], time()+3600);
+	$_SESSION["email"] = $usuario->getMail();
+  setcookie("email", $usuario->getMail(), time()+3600);
   }
 
 function loginController()

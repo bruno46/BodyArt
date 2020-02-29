@@ -1,22 +1,15 @@
 <?php
-    include_once('funciones.php');
-
-    if($_POST) {
-        // 1 - buscar usuario por mail
-        $usuario = buscamePorEmail($_POST['email']);
-        if($usuario !== null) {
-            if(password_verify($_POST['password'], $usuario['password']) === true) {
-                login($usuario);
-            }
-        }
-        // SI mi controlador de login devuelve true, es porque el usuario ingresa con una cookie o con una
-        // session ya iniciada en el sistema, no quiero que vea el form de login
-        if(loginController()) {
-            header('Location: perfil.php');
-            // Lo derivo a su perfil y corto la ejecucion de codigo.
-            exit;
-        }
-    }
+ 
+ include_once('soporte.php');
+ if($_POST){
+$errores = $validador->validarLogin($_POST); 
+   if(count($errores)==0){
+ $usuario = new Usuario(null,null,null,$_POST["email"],$_POST["password"]);
+  $auth->login($usuario);
+   header("location: perfil.php");
+     exit;
+ }
+}
 ?> 
 
 <?php include 'head.php' ?>
