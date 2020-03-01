@@ -19,7 +19,7 @@ $errores = $validador->validarLogin($_POST);
   <!---INICIAR SESION--->
 <div class="container-fluid px-auto pb-5 ">
   <div class="container pt-5 pb-5 ">
-   <?php if(loginController()): ?>
+   <?php if($auth->loginController()): ?>
     <div class="alert alert-danger" role="alert">
        Ya estas conectado, por favor <a href="index.php" class="alert-link">volver al inicio</a>
     </div>

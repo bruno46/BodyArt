@@ -2,9 +2,9 @@
 
 include_once('funciones.php');
 
-    if($_SESSION) {
-        $username = $_SESSION['email'];
-    }
+   // if($_SESSION) {
+     //   $username = $_SESSION['email'];
+   // }
 ?>    
 <?php include 'head.php'?>
 

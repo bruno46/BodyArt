@@ -6,8 +6,11 @@
       
      if($auth->loginController()) {
          // 1 - Necesito traer el usuario y asignarlo a una variable, por suerte ya tengo una funcion de antes!
-         $usuario = $db->traerPorMail($_SESSION["email"]);
-         $username = $usuario['email'];
+         $usuarios = $db->traerPorMail($_SESSION["email"]);
+         foreach($usuarios as $usuario){
+           $username = $usuario['email'];
+        }
+         //$username = $usuario['email'];
          // 2 - Por como arme la subida del avatar, necesito su ID por separado
          // 3 - Dentro de la funcion glob() (http://php.net/manual/es/function.glob.php)
          // concateno la carpeta img al nombre que se genera por default con la subida de las imagenes
@@ -20,8 +23,8 @@
              $archivo = null;
          }
      }
- var_dump($_SESSION);
- var_dump($username);
+ //var_dump($_SESSION);
+ //var_dump($username);
 
 ?>  
 <?php include 'head.php'?>
@@ -30,7 +33,7 @@
         
             <?php include('navbar.php'); ?>
             <?php //SI EL CONTROLLER DE LOGIN DA FALSE, MUESTRO EL SIGUIENTE BLOQUE ?>
-            <?php if(!loginController()): ?>
+            <?php if(!$auth->loginController()): ?>
             <div class="alert alert-danger" role="alert">
                 No estas autorizado en este sistema <a href="registro.php" class="alert-link">Registrate!</a>
             </div>
