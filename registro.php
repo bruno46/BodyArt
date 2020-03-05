@@ -1,17 +1,29 @@
 <?php
 include_once('soporte.php');
-
+$name="";
+$username="";
+$email="";
 if ($_POST){ 
 
-$errores = $validador->validarInformacion($_POST);
+    $errores = $validador->validarInformacion($_POST);
+    $name = $_POST['name'];
+    $username=$_POST['username'];
+    $email=$_POST['email'];
 
+      if(count($errores) == 0) {
 
-if(count($errores) == 0) {
-  $usuario = new Usuario(NULL,$_POST['name'],$_POST['username'], $_POST['email'], $_POST['password']);
-    $usuario->guardarImagen();
-    $db->guardarUsuario($usuario);
+          $name = $_POST['name'];
+          $username=$_POST['username'];
+          $email=$_POST['email'];
+
+          $usuario = new Usuario(NULL,$_POST['name'],$_POST['username'], $_POST['email'], $_POST['password']);
+
+          $usuario->guardarImagen();
+
+          $db->guardarUsuario($usuario);
+
     
-}
+      }
 }
 
 
@@ -41,15 +53,15 @@ if(count($errores) == 0) {
           <form role="form" id="register-form" action="registro.php" autocomplete="off" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
             <div class="form-group">
               <div class="input-group">
-                <input name="name" type="text" class="form-control mb-3" placeholder="Nombre" value="<?=!isset($errores['name']) ? old('name') : "" ?>">
+                <input name="name" type="text" class="form-control mb-3" placeholder="Nombre" value="<?=$name/*!isset($errores['name']) ? old('name') : "" */ ?>">
               </div>
                 <span class="help-block" id="error"></span>
               <div class="input-group">
-                  <input name="username" type="text" class="form-control mb-3" placeholder="Usuario" value="<?=!isset($errores['username']) ? old('username') : "" ?>">
+                  <input name="username" type="text" class="form-control mb-3" placeholder="Usuario" value="<?=$username/*!isset($errores['username']) ? old('username') : "" */?>">
                     <span class="help-block" id="error"></span>
               </div>
               <div class="input-group">
-                  <input name="email" type="text" class="form-control mb-3" placeholder="Ejemplo@hotmail.com" value="<?=!isset($errores['email']) ? old('email') : "" ?>">
+                  <input name="email" type="text" class="form-control mb-3" placeholder="Ejemplo@hotmail.com" value="<?=$email/*!isset($errores['email']) ? old('email') : "" */?>">
               </div> 
                   <span class="help-block" id="error"></span>                     
               <div class="input-group">
@@ -70,8 +82,10 @@ if(count($errores) == 0) {
               </div>
                   <span class="help-block" id="error"></span>     
                       <br>
+
               <div class="form-check mb-1">
-                  <input class="form-check-input" type="checkbox"   name="confirm" id="defaultCheck1" value="<?=!isset($errores['confirm']) ? old('confirm') : "" ?>">
+                  <input class="form-check-input" type="checkbox"   name="confirm" id="defaultCheck1" value="">
+                  <?php //!isset($errores['confirm']) ? old('confirm') : "" ?>
                     <label class="form-check-label" for="defaultCheck1">
                      Acepto los terminos de uso y politicas de seguridad
                     </label>

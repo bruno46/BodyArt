@@ -76,8 +76,11 @@ class Validador
 			$errores["password"] = "No llenaste la contraseña";
 		} else if ($usuario != NULL) {
 			//El usuario existe y puso contraseña
-			// Tengo que validar que la contraseño que ingreso sea valida
-			//if (password_verify($datos['email'], $datos['password']) == false) {
+			 //Tengo que validar que la contraseño que ingreso sea valida
+			//
+			// ARREGLAR ACA
+			//
+			//if (password_verify($datos['password'],$usuario["password"]) == false) {
 			//	$errores["password"] = "La contraseña no verifica";
 			//}
 		}

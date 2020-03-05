@@ -8,14 +8,14 @@ class Auth
 		}
   }
 
-  function login($usuario) {
+ public function login($usuario) {
 	$_SESSION["email"] = $usuario->getMail();
   setcookie("email", $usuario->getMail(), time()+3600);
   }
 
   
 
-function loginController()
+public function loginController()
 {
 	if (isset($_SESSION["email"])) {
 		return true;
@@ -30,7 +30,7 @@ function loginController()
 }
 
 
-function logout()
+public function logout()
 {   
 	session_destroy();
 	setcookie("email", "", time() -1);

@@ -3,7 +3,7 @@
 
      // Generando el perfil dinamicamente!
      // SI hay $_SESSION:
-      
+    
      if($auth->loginController()) {
          // 1 - Necesito traer el usuario y asignarlo a una variable, por suerte ya tengo una funcion de antes!
          $usuarios = $db->traerPorMail($_SESSION["email"]);
@@ -22,9 +22,11 @@
          } else {
              $archivo = null;
          }
-     }
+       
+         }
+     
  //var_dump($_SESSION);
- //var_dump($username);
+ var_dump($usuarios);
 
 ?>  
 <?php include 'head.php'?>

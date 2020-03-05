@@ -1,13 +1,16 @@
 <?php
  
- include_once('soporte.php');
- if($_POST){
-$errores = $validador->validarLogin($_POST); 
-   if(count($errores)==0){
- $usuario = new Usuario(null,null,null,$_POST["email"],$_POST["password"]);
-  $auth->login($usuario);
-   header("location: perfil.php");
-     exit;
+include_once('soporte.php');
+$email = "";
+if($_POST){
+    $errores = $validador->validarLogin($_POST); 
+    $email = $_POST["email"];
+      if(count($errores)==0){
+        
+          $usuario = new Usuario(null,null,null,$_POST["email"],$_POST["password"]);
+          $auth->login($usuario);
+          header("location: perfil.php");
+          exit;
  }
 }
 ?> 
@@ -24,6 +27,11 @@ $errores = $validador->validarLogin($_POST);
        Ya estas conectado, por favor <a href="index.php" class="alert-link">volver al inicio</a>
     </div>
     <?php endif; ?>
+    <?php if(isset($errores)):?>
+  <?php foreach($errores as $error):?>
+<div class="alert alert-danger"><?=$error ?></div>
+<?php endforeach;?>
+<?php endif;?>
       <div class="row">
          <div class="col-lg-6 mx-auto py-3 px-3 fondo-imagen">
             <div class="signup-form ">
@@ -38,7 +46,7 @@ $errores = $validador->validarLogin($_POST);
                      <div class="form-group">
                         <div class="input-group">
                             <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
-                               <input name="email" type="text" class="form-control" value="<?=!isset($errores['email']) ? old('email') : "" ?>" placeholder="Email">
+                               <input name="email" type="text" class="form-control" value="<?=$email/*!isset($errores['email']) ? old('email') : "" */?>" placeholder="Email">
                             </div>
                           <span class="help-block" id="error"></span>
                       </div>
