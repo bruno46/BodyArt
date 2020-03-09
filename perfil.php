@@ -26,7 +26,7 @@
          }
      
  //var_dump($_SESSION);
- var_dump($usuarios);
+ //var_dump($usuarios);
 
 ?>  
 <?php include 'head.php'?>
