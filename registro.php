@@ -1,8 +1,13 @@
 <?php
 include_once('soporte.php');
+
 $name="";
 $username="";
 $email="";
+if($auth->loginController()) {
+  header("location: inicio.php");
+          exit;
+}
 if ($_POST){ 
 
     $errores = $validador->validarInformacion($_POST);

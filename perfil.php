@@ -1,6 +1,9 @@
 <?php
      include_once('soporte.php');
-
+     if(!$auth->loginController()) {
+        header("location: inicio.php");
+                exit;
+      }
      // Generando el perfil dinamicamente!
      // SI hay $_SESSION:
     

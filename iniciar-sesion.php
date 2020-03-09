@@ -2,6 +2,10 @@
  
 include_once('soporte.php');
 $email = "";
+if($auth->loginController()) {
+  header("location: inicio.php");
+          exit;
+}
 if($_POST){
     $errores = $validador->validarLogin($_POST); 
     $email = $_POST["email"];
@@ -9,8 +13,8 @@ if($_POST){
         
           $usuario = new Usuario(NULL,NULL,NULL,$_POST["email"],$_POST["password"]);
           $auth->login($usuario);
-       //   header("location: perfil.php");
-       //   exit;
+          header("location: perfil.php");
+          exit;
  }
 }
 ?> 
