@@ -11,11 +11,6 @@ if ($_POST){
     $email=$_POST['email'];
 
       if(count($errores) == 0) {
-
-          $name = $_POST['name'];
-          $username=$_POST['username'];
-          $email=$_POST['email'];
-
           $usuario = new Usuario(NULL,$_POST['name'],$_POST['username'], $_POST['email'], $_POST['password']);
 
           $usuario->guardarImagen();

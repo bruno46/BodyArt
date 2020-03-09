@@ -6,10 +6,11 @@ if($_POST){
     $errores = $validador->validarLogin($_POST); 
     $email = $_POST["email"];
       if(count($errores)==0){
-          $usuario = new Usuario(null,null,null,$_POST["email"],$_POST["password"]);
+        
+          $usuario = new Usuario(NULL,NULL,NULL,$_POST["email"],$_POST["password"]);
           $auth->login($usuario);
-          header("location: perfil.php");
-          exit;
+       //   header("location: perfil.php");
+       //   exit;
  }
 }
 ?> 

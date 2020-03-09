@@ -70,17 +70,17 @@ class Validador
 			$errores["email"] = "El usuario no esta en nuestra base";
 		}
 
-		$usuario = $this->db->traerPorMail($datos['email']);
+		$user = $this->db->traerPorMail($datos['email']);
+		foreach($user as $user){
+			$password = $user['password'];
+		}
 
 		if ($datos['email'] == "") {
 			$errores["password"] = "No llenaste la contraseña";
-		} else if ($usuario != NULL) {
+		} else if ($user !== NULL) {
 			//El usuario existe y puso contraseña
 			 //Tengo que validar que la contraseño que ingreso sea valida
-			
-			 
-			
-			if (password_verify($datos['password'],$usuario["password"]) == true) {
+		if (password_verify($datos['password'],$password) == false) {
 				$errores["password"] = "La contraseña no verifica";
 			}
 		}
